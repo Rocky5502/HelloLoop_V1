@@ -1,0 +1,12 @@
+experiment,policy,registered_runs,patches_produced,abstentions,evaluator_reaching,resolved,unresolved_evaluated,agent_failures,infrastructure_failures,budget_stops,missing_summaries,registered_resolution_rate,evaluator_resolution_rate,submitted_patch_resolution_rate
+swebench_lite_dev_pilot,linear,12,10,0,10,0,10,0,1,1,0,0.0,0.0,0.0
+swebench_lite_dev_pilot,uncertainty_aware,12,12,0,12,3,9,0,0,0,0,0.25,0.25,0.25
+swebench_lite_dev_pilot,verification,12,11,0,11,2,9,0,1,0,0,0.16666666666666666,0.18181818181818182,0.18181818181818182
+swebench_lite_main,linear,40,40,0,40,22,18,0,0,0,0,0.55,0.55,0.55
+swebench_lite_main,reflection,40,37,0,37,20,17,2,1,0,1,0.5,0.5405405405405406,0.5405405405405406
+swebench_lite_main,uncertainty_aware,40,38,0,38,18,20,1,1,0,1,0.45,0.47368421052631576,0.47368421052631576
+swebench_lite_main,verification,40,36,1,37,18,19,0,3,0,3,0.45,0.4864864864864865,0.5
+swebench_lite_replication,linear,40,34,0,34,19,15,1,4,1,5,0.475,0.5588235294117647,0.5588235294117647
+swebench_lite_replication,uncertainty_aware,40,35,1,36,17,19,2,0,2,2,0.425,0.4722222222222222,0.4857142857142857
+swebench_verified_holdout,uncertainty_aware,20,18,0,18,12,6,2,0,0,0,0.6,0.6666666666666666,0.6666666666666666
+swebench_verified_holdout,verification,20,18,0,18,10,8,2,0,0,0,0.5,0.5555555555555556,0.5555555555555556

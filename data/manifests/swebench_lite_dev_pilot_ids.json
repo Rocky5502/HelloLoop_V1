@@ -1,0 +1,22 @@
+{
+  "experiment": "swebench_lite_dev_pilot",
+  "benchmark": [
+    "swebench_lite_dev"
+  ],
+  "task_count": 12,
+  "run_count": 36,
+  "task_ids": [
+    "marshmallow-code__marshmallow-1359",
+    "pvlib__pvlib-python-1606",
+    "pvlib__pvlib-python-1707",
+    "pydicom__pydicom-1139",
+    "pydicom__pydicom-901",
+    "pylint-dev__astroid-1196",
+    "pylint-dev__astroid-1268",
+    "pylint-dev__astroid-1333",
+    "sqlfluff__sqlfluff-1517",
+    "sqlfluff__sqlfluff-1625",
+    "sqlfluff__sqlfluff-1733",
+    "sqlfluff__sqlfluff-1763"
+  ]
+}

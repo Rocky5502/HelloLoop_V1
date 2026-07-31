@@ -1,0 +1,25 @@
+name: Reproduction problem
+description: Report a mismatch in the public analysis pathway
+title: "[Reproduction]: "
+labels: [reproduction]
+body:
+  - type: textarea
+    id: command
+    attributes:
+      label: Command and sanitized output
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Include OS, architecture, Python version, and dependency changes.
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Safety check
+      options:
+        - label: I removed credentials, private paths, and restricted data.
+          required: true

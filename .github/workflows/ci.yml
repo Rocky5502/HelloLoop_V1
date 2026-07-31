@@ -1,0 +1,40 @@
+name: Public artifact checks
+
+on:
+  push:
+    branches: [main, public-release-v1]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  offline-checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      HELLOLOOP_OFFLINE: "1"
+      MPLBACKEND: Agg
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install tested dependencies
+        run: python -m pip install -e ".[analysis,dev]"
+      - name: Unit tests
+        run: python -m pytest -q
+      - name: Lint and format checks
+        run: |
+          python -m ruff check .
+          python -m ruff format --check .
+      - name: Synthetic smoke test
+        run: python scripts/run_smoke_test.py
+      - name: Reproduce frozen analysis
+        run: python scripts/reproduce_analysis.py
+      - name: Validate artifacts and checksums
+        run: python scripts/validate_artifacts.py
+      - name: Scan public tree and history
+        run: python scripts/security_scan.py

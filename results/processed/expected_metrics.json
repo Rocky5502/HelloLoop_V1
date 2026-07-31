@@ -1,0 +1,51 @@
+{
+  "registered_runs": 316,
+  "evaluated_runs": 291,
+  "patches": 289,
+  "evaluated_abstentions": 2,
+  "resolved": 141,
+  "agent_failures": 10,
+  "infrastructure_failures": 11,
+  "budget_stops": 4,
+  "main": {
+    "linear": [22, 40],
+    "reflection": [20, 40],
+    "verification": [18, 40],
+    "uncertainty_aware": [18, 40],
+    "linear_minus_uncertainty_aware": 0.1,
+    "mcnemar_p": 0.125
+  },
+  "replication": {
+    "linear": [19, 40],
+    "uncertainty_aware": [17, 40],
+    "linear_minus_uncertainty_aware": 0.05,
+    "mcnemar_p": 0.6875
+  },
+  "both_lite": {
+    "linear_rate": 0.5125,
+    "uncertainty_aware_rate": 0.4375,
+    "difference": 0.075,
+    "clustered_ci": [0.0, 0.163],
+    "sign_flip_p": 0.156
+  },
+  "holdout": {
+    "uncertainty_aware": [12, 20],
+    "verification": [10, 20],
+    "difference": 0.1,
+    "mcnemar_p": 0.625
+  },
+  "signal": {
+    "brier": 0.3520119573907025,
+    "ece": 0.31720360824742244,
+    "frozen_auroc": 0.459338061465721,
+    "full_vector_auroc": 0.4111583924349882,
+    "difference": -0.0481796690307328,
+    "clustered_ci": [-0.171, 0.075],
+    "permutation_p": 0.337
+  },
+  "cost": {
+    "budget_total_usd": 132.2048925,
+    "reserved_pre_model_usd": 44.5984975,
+    "measured_total_usd": 87.60639499999999
+  }
+}

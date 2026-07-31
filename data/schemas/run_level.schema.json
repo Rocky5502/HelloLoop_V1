@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Rocky5502/HelloLoop_V1/data/schemas/run_level.schema.json",
+  "title": "HelloLoop redacted run-level record",
+  "type": "object",
+  "required": [
+    "experiment", "run_id", "benchmark", "task_id", "loop_variant", "seed",
+    "terminal_classification", "registered_success", "evaluator_reached"
+  ],
+  "properties": {
+    "experiment": {"type": "string"},
+    "run_id": {"type": "string"},
+    "benchmark": {"type": "string"},
+    "task_id": {"type": "string"},
+    "loop_variant": {"enum": ["linear", "reflection", "verification", "uncertainty_aware"]},
+    "seed": {"type": "integer"},
+    "terminal_classification": {
+      "enum": ["submitted_patch", "abstention", "agent_failure", "infrastructure_failure", "budget_stop"]
+    },
+    "registered_success": {"type": "integer", "minimum": 0, "maximum": 1},
+    "evaluator_reached": {"type": "integer", "minimum": 0, "maximum": 1}
+  }
+}

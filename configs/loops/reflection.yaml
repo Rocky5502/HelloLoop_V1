@@ -1,0 +1,4 @@
+name: reflection
+variant: reflection
+max_steps: 20
+reflection_retries: 1

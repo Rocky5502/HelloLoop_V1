@@ -1,0 +1,5 @@
+name: ci_synthetic
+offline: true
+network: false
+store_raw_prompts: false
+redaction_mode: hash_and_redact
