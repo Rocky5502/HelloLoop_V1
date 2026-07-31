@@ -54,9 +54,9 @@ payloads are obtained separately with the explicit download helper.
 
 ## 6. Remote Status
 
-The branch and draft pull request were verified remotely. Remote Actions were triggered by the
-branch/PR publication and must finish before merge. No passing badge is displayed. The v1.0.0
-release is not published because the draft PR has not been reviewed and merged.
+The branch and draft pull request were verified remotely. GitHub Actions run `30641914406`
+completed successfully, so the README displays the workflow badge. The v1.0.0 release is not
+published because the draft PR has not been reviewed and merged.
 
 ## 7. Remaining Manual Actions
 
