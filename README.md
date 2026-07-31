@@ -4,6 +4,7 @@
 
 [![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-3776AB)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Public artifact checks](https://github.com/Rocky5502/HelloLoop_V1/actions/workflows/ci.yml/badge.svg?branch=public-release-v1)](https://github.com/Rocky5502/HelloLoop_V1/actions/workflows/ci.yml)
 
 HelloLoop is a research framework for instrumenting long-horizon coding agents with explicit,
 auditable control policies. It separates evidence visible to the agent from held-out evaluation,
