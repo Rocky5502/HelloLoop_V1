@@ -1,0 +1,29 @@
+name: Reproduce frozen analysis
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  reproduce:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      HELLOLOOP_OFFLINE: "1"
+      MPLBACKEND: Agg
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: python -m pip install -e ".[analysis]"
+      - run: python scripts/reproduce_analysis.py
+      - run: python scripts/validate_artifacts.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: helloloop-reproduced-analysis
+          path: results/generated/
+          if-no-files-found: error

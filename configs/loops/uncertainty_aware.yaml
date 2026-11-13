@@ -1,0 +1,12 @@
+name: uncertainty_aware
+variant: uncertainty_aware
+max_steps: 20
+self_consistency_samples: 3
+thresholds:
+  task_high: 0.70
+  planning_high: 0.60
+  retrieval_high: 0.60
+  execution_high: 0.50
+  verification_high: 0.55
+  stop_low: 0.20
+  stagnation_high: 0.60

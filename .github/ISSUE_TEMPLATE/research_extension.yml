@@ -1,0 +1,23 @@
+name: Research extension
+description: Propose a controller, estimator, benchmark, or analysis extension
+title: "[Research]: "
+labels: [research-extension]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Research question and expected contribution
+    validations:
+      required: true
+  - type: textarea
+    id: design
+    attributes:
+      label: Proposed design, controls, and evaluation
+    validations:
+      required: true
+  - type: textarea
+    id: provenance
+    attributes:
+      label: Data and dependency provenance
+    validations:
+      required: true

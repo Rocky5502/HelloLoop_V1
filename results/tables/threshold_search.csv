@@ -1,0 +1,10 @@
+parameter,frozen_value,alternative_values_documented,search_performed,selection_criterion,first_recorded_commit,changed_after_first_record
+execution_high,0.5,,no repository evidence,not documented,338bfbeb5d40ca8fa6571156a2cafa97ff920718,no
+planning_high,0.6,,no repository evidence,not documented,338bfbeb5d40ca8fa6571156a2cafa97ff920718,no
+progress_high,0.6,,no repository evidence,not documented,338bfbeb5d40ca8fa6571156a2cafa97ff920718,no
+retrieval_high,0.6,,no repository evidence,not documented,338bfbeb5d40ca8fa6571156a2cafa97ff920718,no
+stagnation_steps,3,,no repository evidence,not documented,338bfbeb5d40ca8fa6571156a2cafa97ff920718,no
+task_high,0.7,,no repository evidence,not documented,338bfbeb5d40ca8fa6571156a2cafa97ff920718,no
+termination_low,0.2,,no repository evidence,not documented,338bfbeb5d40ca8fa6571156a2cafa97ff920718,no
+verification_high,0.55,,no repository evidence,not documented,338bfbeb5d40ca8fa6571156a2cafa97ff920718,no
+verification_moderate,0.4,,no repository evidence,not documented,362c09983aa99189703c5714157995080e1e50a5,no

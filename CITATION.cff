@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this software or artifact, please cite it using this metadata."
+title: "HelloLoop: A Controlled Audit of Uncertainty-Aware Control Loops for LLM Agents"
+type: software
+version: 1.0.0
+date-released: 2026-07-31
+authors:
+  - name: "HelloLoop authors"
+repository-code: "https://github.com/Rocky5502/HelloLoop_V1"
+license: MIT

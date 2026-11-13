@@ -1,0 +1,4 @@
+name: verification
+variant: verification
+max_steps: 20
+verification_schedule: every_edit

@@ -1,0 +1,30 @@
+{
+  "experiment": "swebench_verified_holdout",
+  "benchmark": [
+    "swebench_verified"
+  ],
+  "task_count": 20,
+  "run_count": 40,
+  "task_ids": [
+    "astropy__astropy-13033",
+    "astropy__astropy-13977",
+    "django__django-11728",
+    "django__django-11815",
+    "django__django-13551",
+    "django__django-14351",
+    "django__django-16819",
+    "matplotlib__matplotlib-20488",
+    "matplotlib__matplotlib-23299",
+    "pallets__flask-5014",
+    "pydata__xarray-4356",
+    "pytest-dev__pytest-6202",
+    "scikit-learn__scikit-learn-11578",
+    "scikit-learn__scikit-learn-13328",
+    "scikit-learn__scikit-learn-14141",
+    "scikit-learn__scikit-learn-14710",
+    "scikit-learn__scikit-learn-25973",
+    "sphinx-doc__sphinx-10614",
+    "sympy__sympy-12489",
+    "sympy__sympy-14248"
+  ]
+}
