@@ -5,6 +5,7 @@ type: software
 version: 1.0.0
 date-released: 2026-07-31
 authors:
-  - name: "HelloLoop authors"
+  - family-names: "Sah"
+    given-names: "Chandan Kumar"
 repository-code: "https://github.com/Rocky5502/HelloLoop_V1"
 license: MIT
