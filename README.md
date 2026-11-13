@@ -4,21 +4,32 @@
 
 [![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-3776AB)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-[![Public artifact checks](https://github.com/Rocky5502/HelloLoop_V1/actions/workflows/ci.yml/badge.svg?branch=public-release-v1)](https://github.com/Rocky5502/HelloLoop_V1/actions/workflows/ci.yml)
+[![Public artifact checks](https://github.com/Rocky5502/HelloLoop_V1/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Rocky5502/HelloLoop_V1/actions/workflows/ci.yml)
 
 HelloLoop is a research framework for instrumenting long-horizon coding agents with explicit,
 auditable control policies. It separates evidence visible to the agent from held-out evaluation,
 records uncertainty and resource use at each stage, and supports controlled policy comparisons.
 
+## Framework Architecture
+
 <p align="center">
-  <img src="docs/figures/helloloop_framework.png"
-       alt="HelloLoop uncertainty-aware control framework"
-       width="950">
+  <a href="docs/figures/helloloop_framework.png">
+    <img src="docs/figures/helloloop_framework.png"
+         alt="HelloLoop main framework figure: task understanding, planning, retrieval, execution, verification, memory state, stage-specific uncertainty engine, evidence stack, and adaptive controller"
+         width="1050">
+  </a>
 </p>
 
-The framework follows task understanding, planning, retrieval and inspection, execution and tool
-use, verification, and memory/trajectory updates. Eight stage-specific uncertainty proxies feed
-adaptive controls before a held-out evaluator determines the official outcome.
+<p align="center"><em>Figure 1. HelloLoop's six-stage agent lifecycle, uncertainty engine, agent-visible evidence, adaptive control decisions, and held-out evaluation boundary.</em></p>
+
+**[Open the full-resolution framework figure](docs/figures/helloloop_framework.png)** ·
+[Architecture details](docs/architecture.md) ·
+[Figure provenance and checksums](docs/FIGURE_MANIFEST.md)
+
+The controller observes **eight engineered stage-specific uncertainty signals** covering task,
+planning, retrieval, execution, verification, memory, progress, and termination. It can prioritize
+retrieval, replanning, revision, additional verification, escalation, abstention, or stopping.
+**Official held-out evaluation is never available to the controller during inference.**
 
 ## What HelloLoop Does
 
@@ -52,7 +63,10 @@ terminal registry also records 10 agent failures, 11 infrastructure failures, an
 Frozen signal metrics were Brier 0.352, ECE 0.317, and AUROC 0.459. The grouped full-vector AUROC
 was 0.411; its difference from the frozen signal was -0.048 (clustered 95% CI [-0.171, 0.075],
 permutation p = .337). Conservative budget accounting was $132.20, including $44.60 in pre-model
-reservations; token-derived measured expenditure was $87.61.
+reservations; token-derived measured expenditure was $87.61. Across offline estimator
+perturbations and component-removal conditions, the **maximum observed confidence-gate flip rate
+was 62.5%**. Gate sensitivity is a **post-hoc fixed-trajectory diagnostic**, not the outcome of
+re-running an altered controller.
 
 **Supported conclusion:** The evaluated broad uncertainty-aware controller shows no reliable
 resolution or measured-cost advantage under the studied model, benchmark, provider route, and
@@ -150,10 +164,18 @@ post-hoc over fixed trajectories; intervention subsets do not identify causal ef
 provide no evidence of real-world autonomous safety and should not be used to authorize unattended
 deployment. More detail is in [docs/limitations.md](docs/limitations.md).
 
-## Citation
+## Citation and ACM CCS 2026 Context
 
-Citation metadata is provided in [CITATION.cff](CITATION.cff). The public author list and archival
-identifier are intentionally omitted until verified.
+Software citation metadata is available in [CITATION.cff](CITATION.cff).
+
+The ACM CCS 2026 doctoral-symposium paper is:
+**Chandan Kumar Sah, “Auditable Uncertainty Control for Secure LLM Agents.”**
+[DOI: 10.1145/3830454.3846927](https://doi.org/10.1145/3830454.3846927).
+
+The published doctoral paper describes the broader research program; this repository contains the
+**completed HelloLoop controlled audit**, including its negative results and verified reproduction
+materials. Planned adversarial containment and cross-domain security evaluations are **not**
+presented as completed HelloLoop experiments.
 
 ## License
 
