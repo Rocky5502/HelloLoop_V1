@@ -1,5 +1,11 @@
 # Public Release Final Report
 
+> **Status update (2026-11-13):** The reviewed release was merged into `main` through
+> [PR #1](https://github.com/Rocky5502/HelloLoop_V1/pull/1), merge commit
+> `d89fe8fe59ce3043fe0c4b19ec88b81fdf738383`. The README now features the main
+> framework figure and points its CI badge at `main`. The pre-merge checks documented below
+> remain historical verification evidence.
+
 ## 1. Target
 
 - Repository: `https://github.com/Rocky5502/HelloLoop_V1`
@@ -54,13 +60,16 @@ payloads are obtained separately with the explicit download helper.
 
 ## 6. Remote Status
 
-The branch and draft pull request were verified remotely. GitHub Actions run `30641914406`
-completed successfully, so the README displays the workflow badge. The v1.0.0 release is not
-published because the draft PR has not been reviewed and merged.
+The security-reviewed public release branch passed GitHub Actions, including run `30642136172`
+at head `1fc51a70e4380a6f510b68cc99dec486a5f3c7b6`. Pull request #1 was subsequently
+merged into the default branch `main` on 2026-11-13. The repository now exposes the package,
+tests, documentation, redacted data, and verified framework image on `main`.
 
-## 7. Remaining Manual Actions
+## 7. Release Follow-Up
 
-1. Review remote Actions and merge pull request 1 only if all checks pass.
-2. Supply the verified public author list before replacing the generic citation author entry.
-3. After merge, create the draft `v1.0.0` release with source archives, checksum manifest,
-   reproduction instructions, and known limitations.
+1. **Completed:** Review remote Actions and merge pull request #1.
+2. **Completed:** Replace the generic software citation placeholder with the verified
+   author name, Chandan Kumar Sah, in `CITATION.cff`.
+3. **Optional, not yet done:** Create a versioned `v1.0.0` GitHub Release with source archives,
+   checksum manifest, reproduction instructions, and known limitations.
+4. **Recommended:** Verify the post-merge `main` CI checks remain green.
